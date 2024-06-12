@@ -1,12 +1,20 @@
 body,
 html {
+  position: absolute;
   margin: 0px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 100vw;
+  height: 100vh;
   box-sizing: border-box;
   padding: 0px;
   color: #2c3e50;
   background-color: #ecf0f1;
   font-family: 'Open Sans', sans-serif;
   transform: translate3d(0, 0, 0);
+  overflow: hidden;
 }
 *,
 *:before,
@@ -19,21 +27,25 @@ html {
   font-family: 'Open Sans', sans-serif;
   outline: none !important;
 }
-.HeaderFooter {
-  background-color: #0073e6;
-  color: #ecf0f1;
-  font-weight: 600;
-}
 h1,
 h2,
 h3 {
   font-family: 'Roboto Mono', monospace;
 }
 .header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 10px 10px 0;
+  height: 150px;
   background-color: #0073e6;
   color: #ecf0f1;
   font-weight: 600;
-  padding: 10px;
+}
+.header img {
+  display: inline-block;
+  height: calc(100% - 20px);
 }
 .header h1 {
   display: inline-block;
@@ -42,7 +54,10 @@ h3 {
   display: inline-block;
 }
 .header nav {
-  display: block;
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
   background-color: transparent;
   padding: 10px;
 }
@@ -68,14 +83,25 @@ h3 {
   background-color: #f39c12;
 }
 .footer {
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  display: block;
+  width: 100vw;
+  height: 50px;
+  line-height: 50px;
   background-color: #0073e6;
   color: #ecf0f1;
   font-weight: 600;
-  text-align: center;
-  padding: 10px;
 }
 main {
-  padding: 20px;
+  position: absolute;
+  top: 150px;
+  bottom: 50px;
+  width: 100vw;
+  padding: 0 15px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .cta-button {
   background-color: #f39c12;
