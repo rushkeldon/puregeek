@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define the template files
-header="src/templates/header.html"
-footer="src/templates/footer.html"
+header="src/components/header.html"
+footer="src/components/footer.html"
 
 # Define the placeholder comments
 header_placeholder="{header}"
