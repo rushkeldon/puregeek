@@ -38,6 +38,9 @@ h3 {
   margin: 0;
   padding: 0;
 }
+h3 {
+  margin-left: 10px;
+}
 main {
   position: absolute;
   top: 214px;
@@ -145,6 +148,11 @@ a.inverse:hover {
   line-height: 150px;
   margin: 0;
   font-size: 32px;
+}
+@media screen and (min-width:768px) and (max-width:1099px) {
+  .header .tagline {
+    display: none;
+  }
 }
 @media screen and (max-width:767px) {
   .header .tagline {

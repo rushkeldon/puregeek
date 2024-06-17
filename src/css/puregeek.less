@@ -53,6 +53,10 @@ h1, h2, h3 {
   padding: 0;
 }
 
+h3 {
+  margin-left: 10px;
+}
+
 main {
   position: absolute;
   top: @heightHeaderAndNav;
@@ -158,6 +162,9 @@ a {
     line-height: @heightHeader;
     margin: 0;
     font-size: 32px;
+    @media @queryMedium {
+      display: none;
+    }
     @media @querySmall {
       display: none;
     }
