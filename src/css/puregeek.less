@@ -207,6 +207,12 @@ a {
     @media @querySmall {
       display: none;
     }
+    &:before {
+      content: "•";
+    }
+    &.last {
+      padding-right: 0px;
+    }
   }
   .urge{
     @media @querySmall {

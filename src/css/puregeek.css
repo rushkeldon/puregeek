@@ -202,6 +202,12 @@ a.inverse:hover {
     display: none;
   }
 }
+.footer .middot:before {
+  content: "•";
+}
+.footer .middot.last {
+  padding-right: 0px;
+}
 @media screen and (max-width:767px) {
   .footer .urge {
     display: block;
