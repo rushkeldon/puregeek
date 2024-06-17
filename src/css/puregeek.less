@@ -18,7 +18,7 @@
 @heightNav: 64px;
 @heightHeaderAndNav : @heightHeader + @heightNav;
 
-/* elements */
+/*region elements */
 body, html {
   position : static;
   margin : 0px;
@@ -34,6 +34,8 @@ body, html {
   background-color: @clrWhite;
   font-family: 'Open Sans', sans-serif;
   transform: translate3d(0, 0, 0);
+  overflow-x: hidden;
+  overflow-y: auto;
   &.scrolled {
     height: 100vh;
   }
@@ -47,6 +49,10 @@ body, html {
   scroll-behavior: smooth;
   font-family: 'Open Sans', sans-serif;
   outline : none !important;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 h1, h2, h3 {
@@ -67,6 +73,10 @@ main {
   padding: 10px 15px;
   overflow-x: hidden;
   overflow-y: auto;
+  scrollbar-width: auto;
+  &::-webkit-scrollbar {
+    display: block;
+  }
   @media @querySmall {
     bottom: @heightFooterMobile;
   }
@@ -135,8 +145,8 @@ a {
     }
   }
 }
-
-/* classes */
+/*endregion elements */
+/*region classes */
 .header {
   position: absolute;
   top: 0px;
@@ -263,3 +273,4 @@ section.reviews {
     }
   }
 }
+/*endregion classes */
