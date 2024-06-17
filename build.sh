@@ -1,10 +1,12 @@
 #!/bin/bash
 
 # Define the template files
+head="src/components/head.html"
 header="src/components/header.html"
 footer="src/components/footer.html"
 
 # Define the placeholder comments
+head_placeholder="{head}"
 header_placeholder="{header}"
 footer_placeholder="{footer}"
 
@@ -24,7 +26,8 @@ for input_file in "${input_files[@]}"; do
     filename=$(basename $input_file)
 
     # Replace the placeholders with the template content
-    sed -e "/$header_placeholder/r $header" -e "/$header_placeholder/d" \
+    sed -e "/$head_placeholder/r $head" -e "/$head_placeholder/d" \
+        -e "/$header_placeholder/r $header" -e "/$header_placeholder/d" \
         -e "/$footer_placeholder/r $footer" -e "/$footer_placeholder/d" $input_file > "$output_dir/$filename"
 done
 
