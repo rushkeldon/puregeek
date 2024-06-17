@@ -27,13 +27,16 @@ body, html {
   top : 0px;
   bottom : 0px;
   width : 100vw;
-  height : 100vh;
+  height : calc( 100vh + 30px);
   box-sizing: border-box;
   padding: 0px;
   color: @clrBlack;
   background-color: @clrWhite;
   font-family: 'Open Sans', sans-serif;
   transform: translate3d(0, 0, 0);
+  &.scrolled {
+    height: 100vh;
+  }
 }
 
 *, *:before, *:after {
